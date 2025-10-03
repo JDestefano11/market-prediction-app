@@ -1,6 +1,8 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Inter, Poppins, Roboto_Mono } from "next/font/google";
+import Header from "@/app/components/Header";
 import "./globals.css";
 
 // Fonts
@@ -48,7 +50,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${inter.variable} ${robotoMono.variable} antialiased`}
       >
-        {children}
+        <Header /> {/* Add Header component */}
+        <main>{children}</main>
       </body>
     </html>
   );
