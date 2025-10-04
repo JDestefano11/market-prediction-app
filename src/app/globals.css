@@ -22,13 +22,13 @@
   --chart-orange: #FFAB40;
   --chart-teal: #26A69A;
   
-  /* Light Theme Default Colors */
-  --background: var(--white);
-  --foreground: var(--dark-gray);
-  --card-bg: var(--light-gray);
+  /* Theme Colors */
+  --background: linear-gradient(to bottom right, var(--primary-blue), var(--secondary-blue));
+  --foreground: var(--white);
+  --card-bg: var(--secondary-blue);
   --nav-bg: var(--primary-blue);
   --nav-text: var(--white);
-  --border-color: #dee2e6;
+  --border-color: #30363D;
   
   /* Component Colors */
   --button-primary: var(--primary-blue);
@@ -47,34 +47,12 @@
   --font-financial: var(--font-geist-mono);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Dark Theme Colors */
-    --background: #0D1117;
-    --foreground: #E6EDF3;
-    --card-bg: #161B22;
-    --nav-bg: #0A192F;
-    --nav-text: var(--white);
-    --border-color: #30363D;
-    
-    /* Overrides for dark mode */
-    --button-primary: var(--chart-blue);
-    --button-secondary: #2A4365;
-    --link-color: #63B3ED;
-    --input-border: #4A5568;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 /* Typography Styles */
