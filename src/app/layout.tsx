@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Inter, Poppins, Roboto_Mono } from "next/font/google";
 import Header from "@/app/components/Header";
+import TickerTaper from "@/app/components/TickerTaper";
 import "./globals.css";
 
 // Fonts
@@ -50,7 +51,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${inter.variable} ${robotoMono.variable} antialiased`}
       >
-        <Header /> {/* Add Header component */}
+        <TickerTaper />
+        <Header />
         <main>{children}</main>
       </body>
     </html>
